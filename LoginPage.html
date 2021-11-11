@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        body {
+            font-family: "Audiowide", sans-serif;
+            background-color: black;
+            }
+
+        #loginDiv {
+          background-color: white;
+          text-align: center;
+          border-style: ridge;
+          border-color: #f2f2f2;
+          border-width: 10px;
+          max-width: 600px;
+          margin: auto;
+        }
+        h1 {
+          color: #f2f2f2;
+          text-align: center;
+          font-weight: bold;
+          line-height: 0.8;
+        }
+        h2 {
+          color: black;
+          text-align: center;
+          font-weight: normal;
+        }
+        #captchaBackground {
+             height: 220px;
+             width: 250px;
+             background-color: #2d3748;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             flex-direction: column;
+        }
+        #captchaHeading {
+             color: white;
+        }
+        #captcha {
+             height: 80%;
+             width: 80%;
+             font-size: 30px;
+             letter-spacing: 3px;
+             margin: auto;
+             display: block;
+             top: 0;
+             bottom: 0;
+             left: 0;
+             right: 0;
+        }
+        .center {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+        }
+        #submitButton {
+             margin-top: 2em;
+             margin-bottom: 2em;
+             background-color: #08e5ff;
+             border: 0px;
+             font-weight: bold;
+        }
+        #refreshButton {
+             background-color: #08e5ff;
+             border: 0px;
+             font-weight: bold;
+        }
+        #textBox {
+             height: 25px;
+        }
+        .incorrectCaptcha {
+             color: #FF0000;
+        }
+        .correctCaptcha {
+             color: #7FFF00;
+        }
+    </style>
+    <title>Homework 4</title>
+</head>
+<body>
+    <h1>Computer Security and Privacy</h1>
+    <h1>Homework 4</h1>
+    <h1>Laurent Mwamba</h1>
+    <br>
+    <div id="loginDiv">
+        <h2>Please Login</h2>
+        <br>
+        <form action="login.php" method="post">
+            <?php if (isset($_GET['error'])) { ?>
+                <p class="error"><?php echo $_GET['error']; ?></p>
+            <?php } ?>
+            Enter your username
+            <br>
+            <input type="text" name="username" title="Username" placeholder="username">
+            <br>
+            <br>
+            Enter your password
+            <br>
+            <input type="password" name="password" title="Password" placeholder="password">
+            <br>
+                        <br>
+            <br>
+
+             <div class="center">
+                 <div id="captchaBackground">
+                     <canvas id="captcha">captcha text</canvas>
+                     <input id="textBox" type="text" name="text">
+                     <div id="buttons">
+                         <input id="submitButton" type="submit">
+                         <button id="refreshButton" type="submit">Refresh</button>
+                     </div>
+                     <span id="output"></span>
+                 </div>
+             </div>
+            <br>
+            <input type="submit">
+            <br>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
