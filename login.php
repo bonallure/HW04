@@ -9,6 +9,9 @@
     if (!$conn) {
         echo "Connection failed!";
     }
+    else{
+        echo "Connection success!"
+    }
     session_start();
 
     include "db_conn.php";
@@ -26,6 +29,7 @@
         $pass = validate($_POST['password']);
 
         if (empty($user_name)) {
+            alert
             header("Location: index.html?error=User Name is required");
             exit();
         }else if(empty($pass)){
