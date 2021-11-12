@@ -3,13 +3,6 @@
 <body>
 
 <?php
-    echo $_POST['username'];
-?>
-
-</body>
-</html>
-
-/*
     $server= "localhost";
     $username= "root";
     $password = "COSC4343";
@@ -17,11 +10,18 @@
     $conn = mysqli_connect($server, $username, $password, $db_name);
 
     if (!$conn) {
-        echo "Connection failed!"<br>;
+        echo "Connection failed!<br>";
     }
     else{
-        echo "Connection success!"<br>;
+        echo "Connection success!<br>";
     }
+?>
+
+</body>
+</html>
+
+/*
+
     session_start();
    include "db_conn.php";
 
