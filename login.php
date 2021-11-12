@@ -8,7 +8,7 @@ $server= "localhost";
 $username= "root";
 $password = "COSC4343";
 $db_name = "hm04";
-$conn = new mysqli_connect($server, $username, $password, $db_name);
+$conn = new mysqli($server, $username, $password, $db_name);
 
 if ($conn -> connect_errno) {
     echo "Connection failed!<br>";
