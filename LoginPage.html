@@ -15,9 +15,6 @@
         <h2>Please Login</h2>
         <br>
         <form action="login.php" method="post">
-            <?php if (isset($_GET['error'])) { ?>
-                <p class="error"><?php echo $_GET['error']; ?></p>
-            <?php } ?>
             Enter your username
             <br>
             <input type="text" name="username" title="Username" placeholder="username">
