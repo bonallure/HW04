@@ -1,6 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+
 <?php
     echo "Test 1"<br>;
 ?>
+
+</body>
+</html>
 
 /*
     $server= "localhost";
