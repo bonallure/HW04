@@ -3,16 +3,14 @@
 <body>
 
 <?php
-include "db_conn.php";
-
 $server= "localhost";
 $username= "root";
 $password = "COSC4343";
 $db_name = "hm04";
-$conn = mysqli_connect($server, $username, $password, $db_name);
+$conn = new mysqli_connect($server, $username, $password, $db_name);
 
-if (!$conn) {
-    echo "Connection failed!<br>";
+if ($conn -> connect_errno) {
+    echo "Connection failed!<br>" $conn -> connect_error;
 }
 else{
     echo "Connection success!<br>";
