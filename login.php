@@ -9,11 +9,13 @@
         echo "Connection failed!";
     }
     else{
-        echo "Connection success!"
+        return echo "Connection success!"
     }
     session_start();
+?>
 
-    include "db_conn.php";
+/*
+   include "db_conn.php";
 
     if (isset($_POST['username']) && isset($_POST['password'])) {
         function validate($data){
@@ -67,4 +69,4 @@
         header("Location: index.php");
         exit();
     }
-?>
+*/
