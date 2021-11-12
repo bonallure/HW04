@@ -1,17 +1,17 @@
 <?php
-    $server= "localhost";
-    $username= "root";
-    $password = "COSC4343";
-    $db_name = "hm04";
-    $conn = mysqli_connect($server, $username, $password, $db_name);
+$server= "localhost";
+$username= "root";
+$password = "COSC4343";
+$db_name = "hm04";
+$conn = mysqli_connect($server, $username, $password, $db_name);
 
-    if (!$conn) {
-        echo "Connection failed!"<br>;
-    }
-    else{
-        echo "Connection success!"<br>;
-    }
-    session_start();
+if (!$conn) {
+    echo "Connection failed!"<br>;
+}
+else{
+    echo "Connection success!"<br>;
+}
+session_start();
 ?>
 
 /*
