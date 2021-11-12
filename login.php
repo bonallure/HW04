@@ -3,18 +3,20 @@
 <body>
 
 <?php
-    $server= "localhost";
-    $username= "root";
-    $password = "COSC4343";
-    $db_name = "hm04";
-    $conn = mysqli_connect($server, $username, $password, $db_name);
+include "db_conn.php";
 
-    if (!$conn) {
-        echo "Connection failed!<br>";
-    }
-    else{
-        echo "Connection success!<br>";
-    }
+$server= "localhost";
+$username= "root";
+$password = "COSC4343";
+$db_name = "hm04";
+$conn = mysqli_connect($server, $username, $password, $db_name);
+
+if (!$conn) {
+    echo "Connection failed!<br>";
+}
+else{
+    echo "Connection success!<br>";
+}
 ?>
 
 </body>
@@ -23,7 +25,7 @@
 /*
 
     session_start();
-   include "db_conn.php";
+
 
     if (isset($_POST['username']) && isset($_POST['password'])) {
         function validate($data){
