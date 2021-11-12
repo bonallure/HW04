@@ -3,6 +3,7 @@
 <body>
 
 <?php
+echo "Hello<br>";
 $server= "localhost";
 $username= "root";
 $password = "COSC4343";
