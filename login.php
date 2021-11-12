@@ -3,7 +3,7 @@
 <body>
 
 <?php
-    echo "Test 1"<br>;
+    echo $_POST['username']<br>;
 ?>
 
 </body>
