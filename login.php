@@ -11,7 +11,7 @@ $db_name = "hm04";
 $conn = new mysqli_connect($server, $username, $password, $db_name);
 
 if ($conn -> connect_errno) {
-    echo "Connection failed!<br>" . $conn -> connect_error;
+    echo "Connection failed!<br>";
 }
 else{
     echo "Connection success!<br>";
