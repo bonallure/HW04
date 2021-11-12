@@ -1,4 +1,3 @@
-
 <?php
     $server= "localhost";
     $username= "root";
@@ -29,10 +28,10 @@
         $pass = validate($_POST['password']);
 
         if (empty($user_name)) {
-            alert
             header("Location: index.html?error=User Name is required");
             exit();
-        }else if(empty($pass)){
+        }
+        else if(empty($pass)){
             header("Location: index.php?error=Password is required");
             exit();
         }
@@ -69,14 +68,3 @@
         exit();
     }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-    <link rel="stylesheet" href="loginPage.css">
-    <title>Homework 4</title>
-</head>
-<body>
-    <h1>Hello can you see me?</h1>
-</body>
