@@ -1,4 +1,3 @@
-
 <?php
 echo "Hello<br>";
 $server= "localhost";
@@ -47,6 +46,28 @@ else{
     exit();
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="loginPage.css">
+    <title>Homework 4</title>
+</head>
+<body>
+    <h1>Computer Security and Privacy</h1>
+    <h1>Homework 4</h1>
+    <h1>Laurent Mwamba</h1>
+    <br>
+    <div id="loginDiv">
+        <h2>Welcome you</h2>
+        <br>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
 /*
 
     session_start();
