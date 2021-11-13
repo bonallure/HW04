@@ -26,8 +26,25 @@ echo "password: " . $pass . "<br>";
 
 $sql = "SELECT * FROM UserAccounts WHERE username='$user_name' AND password='$pass'";
 $result = $conn -> query($sql);
-while ($row = $result->fetch_assoc()) {
-    echo $row['username']."<br>";
+if (mysqli_num_rows($result) === 1) {
+    $row = mysqli_fetch_assoc($result);
+
+    if ($row['username'] === $user_name && $row['password'] === $pass) {
+        echo "Logged in!<br>";
+        $_SESSION['username'] = $row['user_name'];
+        $_SESSION['userID'] = $row['id'];
+        $_SESSION['clearance'] = $row['clearance'];
+
+        exit();
+    }
+    else{
+        echo "Incorrect User name or password<br>";
+        exit();
+    }
+}
+else{
+    echo "Database error<br>";
+    exit();
 }
 ?>
 /*
