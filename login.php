@@ -48,7 +48,7 @@
                 $_SESSION['clearance'] = $row['clearance'];
 
                 if ($_SESSION['clearance'] === "T"){
-                    $images = array("TopSecret.png","Secret.png","Confidential.png","Unclassified.png")
+                    $images = array("TopSecret.png","Secret.png","Confidential.png","Unclassified.png");
                     foreach($images as $image) {
                         echo '<div class="center"><img src="$image"></div>';
                     }
