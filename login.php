@@ -16,6 +16,21 @@ if ($conn -> connect_errno) {
 else{
     echo "Connection success!<br>";
 }
+function validate($data){
+           $data = trim($data);
+           $data = stripslashes($data);
+           $data = htmlspecialchars($data);
+
+           return $data;
+
+$user_name = validate($_POST['username']);
+echo "username: " . $user_name . "<br>";
+$pass = validate($_POST['password']);
+echo "password: " . $pass . "<br>";
+
+$sql = "SELECT * FROM UserAccounts WHERE username='$user_name' AND password='$pass'";
+$result = mysqli_query($conn, $sql);
+echo $result . "<br>";
 ?>
 
 </body>
@@ -27,12 +42,7 @@ else{
 
 
     if (isset($_POST['username']) && isset($_POST['password'])) {
-        function validate($data){
-           $data = trim($data);
-           $data = stripslashes($data);
-           $data = htmlspecialchars($data);
 
-           return $data;
         }
 
         $user_name = validate($_POST['username']);
