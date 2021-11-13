@@ -43,7 +43,7 @@
         $result = $conn -> query($sql);
         if (mysqli_num_rows($result) < 1) {
             $row = mysqli_fetch_assoc($result);
-            echo "<h2>Test $row['username'] $row['password']</h2><br>";
+            echo "<h2>Test ". $row['username'] ." " .$row['password'] ." </h2><br>";
             if ($row['username'] === $user_name && $row['password'] === $md5_pass) {
                 echo "<h2>Welcome $user_name</h2><br>";
                 $_SESSION['username'] = $row['username'];
