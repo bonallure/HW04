@@ -39,8 +39,7 @@
         $md5_pass = validate(md5($pass));
         echo "md5(password): " . $md5_pass . "<br>";
 
-        $sql = "SELECT * FROM UserAccounts WHERE username='$user_name' AND password='$pass'";
-        echo $sql."<br>";
+        $sql = "SELECT * FROM UserAccounts WHERE username='$user_name' AND password='$md5_pass'";
         $result = $conn -> query($sql);
         if (mysqli_num_rows($result) < 1) {
             $row = mysqli_fetch_assoc($result);
