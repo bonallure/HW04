@@ -41,7 +41,7 @@
 
         $sql = "SELECT * FROM UserAccounts WHERE username='$user_name' AND password='$pass'";
         $result = $conn -> query($sql);
-        if (mysqli_num_rows($result) === 1) {
+        if (mysqli_num_rows($result) === 4) {
             $row = mysqli_fetch_assoc($result);
 
             if ($row['username'] === $user_name && $row['password'] === $md5_pass) {
