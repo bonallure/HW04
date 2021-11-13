@@ -16,10 +16,9 @@ if ($conn -> connect_errno) {
 else{
     echo "Connection success!<br>";
 }
+
 function validate($data){
            $data = trim($data);
-           $data = stripslashes($data);
-           $data = htmlspecialchars($data);
 
            return $data;
 
