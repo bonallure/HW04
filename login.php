@@ -61,7 +61,6 @@
                         echo '<div id="imageDiv" class="center"><img src="'.$image.'"></div>';
                     }
                 }
-                exit();
                 if ($_SESSION['clearance'] === "C"){
                     $images = array("Confidential.png","Unclassified.png");
                     foreach ($images as $image) {
@@ -74,7 +73,6 @@
                         echo '<div id="imageDiv" class="center"><img src="'.$image.'"></div>';
                     }
                 }
-                exit();
             }
             else{
                 echo "Incorrect User name or password<br>";
