@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
 
 <?php
 echo "Hello<br>";
@@ -31,7 +28,3 @@ $sql = "SELECT * FROM UserAccounts WHERE username='$user_name' AND password='$pa
 $result = mysqli_query($conn, $sql);
 echo $result . "<br>";
 ?>
-
-</body>
-</html>
-
