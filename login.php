@@ -25,8 +25,8 @@ $pass = validate($_POST['password']);
 echo "password: " . $pass . "<br>";
 
 $sql = "SELECT * FROM UserAccounts WHERE username='$user_name' AND password='$pass'";
-$result = mysqli_query($conn, $sql);
-echo $result . "<br>";
+$result = $conn -> query($sql);
+echo str($result) . "<br>";
 ?>
 /*
 
