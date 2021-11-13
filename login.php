@@ -54,20 +54,20 @@
                     }
                 }
                 if ($_SESSION['clearance'] === "S"){
-                    $images = array("Secret.png","Confidential.png","Unclassified.png")
+                    $images = array("Secret.png","Confidential.png","Unclassified.png");
                     foreach ($images as $image) {
                         echo '<div class="center"><img src="$image"></div>';
                     }
                 }
                 exit();
                 if ($_SESSION['clearance'] === "C"){
-                    $images = array("Confidential.png","Unclassified.png")
+                    $images = array("Confidential.png","Unclassified.png");
                     foreach ($images as $image) {
                         echo '<div class="center"><img src="$image"></div>';
                     }
                 }
                 if ($_SESSION['clearance'] === "U"){
-                    $images = array("Unclassified.png")
+                    $images = array("Unclassified.png");
                     foreach ($images as $image) {
                         echo '<div class="center"><img src="$image"></div>';
                     }
