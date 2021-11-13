@@ -38,11 +38,12 @@ userText.addEventListener('keyup', function(e) {
 // This event listener is stimulated whenever the user clicks the "Submit" button
 // "Correct!" or "Incorrect, please try again" message is
 // displayed after validating the input text with CAPTCHA
-submitButton.addEventListener('click', function() {
+submitButton.addEventListener('click', function(event) {
  if (userText.value === c) {
  output.classList.add("correctCaptcha");
  output.innerHTML = "Correct!";
  } else {
+ event.preventDefault();
  output.classList.add("incorrectCaptcha");
  output.innerHTML = "Incorrect, please try again";
  }
