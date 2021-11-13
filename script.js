@@ -50,7 +50,8 @@ submitButton.addEventListener('click', function(event) {
 });
 // This event listener is stimulated whenever the user press the "Refresh" button
 // A new random CAPTCHA is generated and displayed after the user clicks the "Refresh" button
-refreshButton.addEventListener('click', function() {
+refreshButton.addEventListener('click', function(event) {
+ event.preventDefault();
  userText.value = "";
  let refreshArr = [];
  for (let j = 1; j <= 7; j++) {
