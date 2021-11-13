@@ -45,7 +45,6 @@
             if ($row['username'] === $user_name && $row['password'] === $pass) {
                 echo "Logged in!<br>";
                 $_SESSION['username'] = $row['user_name'];
-                $_SESSION['userID'] = $row['id'];
                 $_SESSION['clearance'] = $row['clearance'];
 
                 exit();
