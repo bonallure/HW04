@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <link rel="stylesheet" href="loginPage.css">
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
     <title>Homework 4</title>
 </head>
 <body>
     <h1>Computer Security and Privacy</h1>
+    <button onclick="goBack()">Logout</button>
     <h1>Homework 4</h1>
     <h1>Laurent Mwamba</h1>
     <br>
@@ -33,17 +39,17 @@
                    return $data;
         }
         $user_name = validate($_POST['username']);
-        echo "username: ".$user_name."<br>";
+        // echo "username: ".$user_name."<br>";
         $pass = validate($_POST['password']);
-        echo "password: " . $pass . "<br>";
+        // echo "password: " . $pass . "<br>";
         $md5_pass = validate(md5($pass));
-        echo "md5(password): " . $md5_pass . "<br>";
+        // echo "md5(password): " . $md5_pass . "<br>";
 
         $sql = "SELECT * FROM UserAccounts WHERE username='$user_name' AND password='$md5_pass'";
         $result = $conn -> query($sql);
         if (mysqli_num_rows($result) === 1) {
             $row = mysqli_fetch_assoc($result);
-            echo "<h2>Test ". $row['username'] ." " .$row['password'] ." </h2><br>";
+            // echo "<h2>Test ". $row['username'] ." " .$row['password'] ." </h2><br>";
             if ($row['username'] === $user_name && $row['password'] === $md5_pass) {
                 echo "<h2>Welcome $user_name</h2><br>";
                 $_SESSION['username'] = $row['username'];
@@ -83,7 +89,6 @@
             echo "Database error<br>";
             exit();
         }
-        echo $_SESSION['clearance']."<br>";
         ?>
 
 

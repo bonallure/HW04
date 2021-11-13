@@ -84,3 +84,7 @@ h2 {
 .correctCaptcha {
      color: #7FFF00;
 }
+.right {
+     align-items: right;
+     align: right;
+}
