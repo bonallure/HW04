@@ -43,33 +43,33 @@
             $row = mysqli_fetch_assoc($result);
 
             if ($row['username'] === $user_name && $row['password'] === $pass) {
-                echo "<h2>Welcome you</h2><br>";
+                echo "<h2>Welcome $user_name</h2><br>";
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['clearance'] = $row['clearance'];
 
                 if ($_SESSION['clearance'] === "T"){
                     $images = array("TopSecret.png","Secret.png","Confidential.png","Unclassified.png");
                     foreach($images as $image) {
-                        echo '<div class="center"><img src="$image"></div>';
+                        echo '<div class="center"><img src="'.$image.'"></div>';
                     }
                 }
                 if ($_SESSION['clearance'] === "S"){
                     $images = array("Secret.png","Confidential.png","Unclassified.png");
                     foreach ($images as $image) {
-                        echo '<div class="center"><img src="$image"></div>';
+                        echo '<div class="center"><img src="'.$image.'"></div>';
                     }
                 }
                 exit();
                 if ($_SESSION['clearance'] === "C"){
                     $images = array("Confidential.png","Unclassified.png");
                     foreach ($images as $image) {
-                        echo '<div class="center"><img src="$image"></div>';
+                        echo '<div class="center"><img src="'.$image.'"></div>';
                     }
                 }
                 if ($_SESSION['clearance'] === "U"){
                     $images = array("Unclassified.png");
                     foreach ($images as $image) {
-                        echo '<div class="center"><img src="$image"></div>';
+                        echo '<div class="center"><img src="'.$image.'"></div>';
                     }
                 }
                 exit();
