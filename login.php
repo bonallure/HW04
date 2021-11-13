@@ -26,7 +26,9 @@ echo "password: " . $pass . "<br>";
 
 $sql = "SELECT * FROM UserAccounts WHERE username='$user_name' AND password='$pass'";
 $result = $conn -> query($sql);
-echo str($result) . "<br>";
+while ($row = $result->fetch_assoc()) {
+    echo $row['classtype']."<br>";
+}
 ?>
 /*
 
