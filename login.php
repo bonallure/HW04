@@ -36,14 +36,14 @@
         echo "username: ".$user_name."<br>";
         $pass = validate($_POST['password']);
         echo "password: " . $pass . "<br>";
-        $md5_pass = md5($pass);
+        $md5_pass = validate(md5($pass));
         echo "md5(password): " . $md5_pass . "<br>";
 
         $sql = "SELECT * FROM UserAccounts WHERE username='$user_name' AND password='$pass'";
         $result = $conn -> query($sql);
         if (mysqli_num_rows($result) < 1) {
             $row = mysqli_fetch_assoc($result);
-
+            echo "<h2>Test $row['username'] $row['password']</h2><br>";
             if ($row['username'] === $user_name && $row['password'] === $md5_pass) {
                 echo "<h2>Welcome $user_name</h2><br>";
                 $_SESSION['username'] = $row['username'];
