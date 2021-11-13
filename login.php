@@ -59,6 +59,7 @@
             echo "Database error<br>";
             exit();
         }
+        echo $_SESSION['clearance']."<br>";
         ?>
         <h2>Welcome you</h2>
         <br>
