@@ -7,7 +7,7 @@ echo "Hello<br>";
 $server= "localhost";
 $username= "root";
 $password = "COSC4343";
-$db_name = "mysql";
+$db_name = "homework";
 $conn = new mysqli($server, $username, $password, $db_name);
 
 if ($conn -> connect_errno) {
